@@ -21,7 +21,7 @@ This lab requires `*.sql` files used to create a database with tables that conta
 
 2. Start the `psql` interactive terminal:
     ```
-    psql
+    sudo -u postgres psql
     ```
 
 3. Create a database named `carmen` and connect to it:
