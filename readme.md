@@ -16,7 +16,7 @@ We're going to use what we've learned already about querying a database using SQ
 
 This lab requires `*.sql` files used to create a database with tables that contain data about locations across the 🌎...
 
-NOTE: Make sure you `cd` into the lab before proceeding.
+NOTE: Make sure you `cd` into the `carmen-sandiego-sql-lab` folder before proceeding.
 
 1. Open a terminal session (`control + backtick`) and run `ls` - you should see three files: `clues.sql`, `world.sql` & `solution.md`.
 
