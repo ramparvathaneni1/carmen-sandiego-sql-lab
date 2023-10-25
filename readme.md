@@ -66,6 +66,12 @@ Check your progress by running the queries that you write in **clues.sql** using
 
 - If you finish this exercise and want to learn more about SQL, do some of [these exercises here](https://pgexercises.com/).
 
-- Or, you can try the additional challenges in this slide:
+- Or, you can try the PG Admin additional challenges in the slide below:
+
+    - [PG Admin URL](https://analyticsga-global.generalassemb.ly/)
+    - [Secondary PG Admin URL](https://pgadmin-staging.generalassemb.ly/)
+    - Username: `analytics_student@generalassemb.ly`
+    - Password: `analyticsga`
+    
 
     ![](./extra_sql_challenges.png)
