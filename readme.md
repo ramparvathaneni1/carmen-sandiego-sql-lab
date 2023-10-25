@@ -64,4 +64,8 @@ Check your progress by running the queries that you write in **clues.sql** using
 
 ## Encore 
 
-If you finish this exercise and want to learn more about SQL, do some of [these exercises here](https://pgexercises.com/).
+- If you finish this exercise and want to learn more about SQL, do some of [these exercises here](https://pgexercises.com/).
+
+- Or, you can try the additional challenges in this slide:
+
+    ![](./extra_sql_challenges.png)
