@@ -74,4 +74,4 @@ Check your progress by running the queries that you write in **clues.sql** using
     - Password: `analyticsga`
     
 
-    ![](./extra_sql_challenges.png)
+    ![](./extra_practice.png)
