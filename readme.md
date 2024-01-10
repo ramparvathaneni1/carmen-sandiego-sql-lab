@@ -71,6 +71,8 @@ Check your progress by running the queries that you write in **clues.sql** using
 
 - Clear your psql interactive terminal use the `\! clear` command
 
+- Make sure to save your clues.sql file before running your queries using (`ctrl + s`) in the keyboard.
+
 
 ## Additional Resources
 
