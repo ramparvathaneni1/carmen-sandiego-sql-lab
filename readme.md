@@ -69,7 +69,8 @@ Check your progress by running the queries that you write in **clues.sql** using
 
 - Try not to peek too much at **solution.sql**.
 
-- clear your psql interactive terminal use the `\! clear` command
+- Clear your psql interactive terminal use the `\! clear` command
+
 
 ## Additional Resources
 
