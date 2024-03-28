@@ -3,20 +3,37 @@
 -- so find the least populated country in Southern Europe, and we'll start looking for her there.
  
 -- Write SQL query here
-
+SELECT code, name, region, population
+FROM country
+WHERE region = 'Southern Europe'
+ORDER BY population ASC
+LIMIT 1;
+-- Answer = VAT, pop = 1000
 
 -- Clue #2: Now that we're here, we have insight that Carmen was seen attending language classes in
 -- this country's officially recognized language. Check our databases and find out what language is
 -- spoken in this country, so we can call in a translator to work with you.
 
 -- Write SQL query here
-
+SELECT language
+FROM countrylanguage
+WHERE countrycode='VAT'
+    AND isofficial='t';
+-- Answer = Italian
 
 -- Clue #3: We have new news on the classes Carmen attended – our gumshoes tell us she's moved on
 -- to a different country, a country where people speak only the language she was learning. Find out which
 -- nearby country speaks nothing but that language.
 
 -- Write SQL query here
+SELECT c.code, c.name, c.region
+FROM country AS c
+JOIN countrylanguage AS l
+    ON c.code=l.countrycode
+    AND l.language='Italian'
+    AND l.percentage = 100
+    AND c.region = 'Southern Europe';
+-- Answer = SMR San Marino
 
 
 -- Clue #4: We're booking the first flight out – maybe we've actually got a chance to catch her this time.
@@ -25,6 +42,11 @@
 -- be flying to.
 
 -- Write SQL query here
+SELECT id, name
+FROM city
+WHERE countrycode='SMR' 
+    AND name NOT ILIKE '%San Marino%';
+-- Answer = 3170 Serravalle
 
 
 -- Clue #5: Oh no, she pulled a switch – there are two cities with very similar names, but in totally different
@@ -32,6 +54,13 @@
 -- headed to, but doesn't end the same. Find out the city, and do another search for what country it's in. Hurry!
 
 -- Write SQL query here
+SELECT ci.id, ci.name, c.code, c.name
+FROM city ci
+JOIN country c
+    ON ci.countrycode=c.code
+    AND ci.name ILIKE 'Serra%' 
+    AND c.continent = 'South America';
+-- Answer = 265 Serra (BRA, Brazil)
 
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards
@@ -39,6 +68,13 @@
 -- follow right behind you!
 
 -- Write SQL query here
+SELECT ci.id, ci.name, c.name
+FROM city ci
+JOIN country c
+    ON c.code=ci.countrycode
+    AND ci.id=c.capital
+    AND c.code='BRA';
+-- Answer = 211 Bras�lia
 
 
 -- Clue #7: She knows we're on to her – her taxi dropped her off at the international airport, and she beat us to
@@ -56,4 +92,7 @@
 
 
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
-
+SELECT id, name, countrycode, population
+FROM city
+WHERE population = 91084;
+-- Answer 4060 Santa Monica, USA, 91084
